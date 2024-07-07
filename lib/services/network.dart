@@ -6,7 +6,7 @@ import '../utils/constants.dart';
 import '../utils/functions.dart';
 
 Future <dynamic> fetchWeatherData ({required String location}) async {
-  final Uri uri = Uri.parse("http://api.weatherapi.com/v1/current.json?key=$API_KEY&q=$location");
+  final Uri uri = Uri.parse("http://api.weatherapi.com/v1/current.json?key=$Weather_API_KEY&q=$location");
   try {
     final response = await http.get(uri).timeout(const Duration(seconds: timeoutDuration));
     if (response.statusCode == 200){
@@ -51,7 +51,7 @@ String handleApiError(Response response) {
 
 Future <String>? getAutoCompleteData ({required String query}) async {
   try {
-    final Uri uri = Uri.parse("https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$query&types=locality&key=AIzaSyBJafVfNO3KpMhJMVub4YrQR5R5vAiHscg");
+    final Uri uri = Uri.parse("https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$query&types=locality&key=$GOOGLE_API_KEY");
     final response = await http.get(uri).timeout(const Duration(seconds: timeoutDuration));
     if (response.statusCode == 200){
       return response.body;

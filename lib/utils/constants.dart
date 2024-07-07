@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const String API_KEY = "****";
+const String Weather_API_KEY = "****";
 const String GOOGLE_API_KEY = "****";
 
 
