@@ -30,7 +30,7 @@ https://github.com/Shashwat-111/OptionsView/assets/73649098/8f35d730-3714-4934-8
 2. Add API Keys:
 
     - Go to lib/utils/constants.dart.
-    - Add the GooglePlacesAPI key and WeatherAPI key that were provided in the email.
+    - Add the GooglePlacesAPI key and WeatherAPI key.
 
 4. Install dependencies:
    ```
